@@ -158,34 +158,21 @@ const Appoint = () => {
     }
 
     try {
-    //   const response = await fetch(
-    //     "http://localhost:10000/api/patients",
-    //     "https://denty-smile.onrender.com/api/patients"
-    //     , {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({
-    //       username: formData.username,
-    //       userlastname: formData.userlastname,
-    //       phone: formData.phone,
-    //       appointmentDate: dateKey,
-    //       appointmentTime: selectedTime.display,
-    //       appointmentTimestamp: selectedTime.time
-    //     }),
-    //   });
-
-    const response = await fetch("http://localhost:10000/api/patients", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    username: formData.username,
-    userlastname: formData.userlastname,
-    phone: formData.phone,
-    appointmentDate: dateKey,
-    appointmentTime: selectedTime.display,
-    appointmentTimestamp: selectedTime.time
-  })
-});
+      const response = await fetch(
+        "http://localhost:10000/api/patients"
+        // "https://denty-smile.onrender.com/api/patients"
+        , {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: formData.username,
+          userlastname: formData.userlastname,
+          phone: formData.phone,
+          appointmentDate: dateKey,
+          appointmentTime: selectedTime.display,
+          appointmentTimestamp: selectedTime.time
+        }),
+      });
 
       if (!response.ok) {
         const error = await response.json();
