@@ -159,8 +159,8 @@ const Appoint = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:10000/api/patients"
-        // "https://denty-smile.onrender.com/api/patients"
+        // "http://localhost:10000/api/patients"
+        "https://denty-smile.onrender.com/api/patients"
         , {
         method: "POST",
         headers: { "Content-Type": "application/json" },
